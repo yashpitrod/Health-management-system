@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <div class="form">
+    <h2>Appointment Form</h2>
+    <form>
+      <div class="information">
+        <i class="fa fa-user"></i>
+        <input type="text" placeholder="Enter Your Name" required>
+      </div>
+
+      <div class="information">
+        <i class="fa fa-envelope"></i>
+        <input type="email" placeholder="Email (Optional)">
+      </div>
+
+      <div class="information">
+        <i class="fa fa-phone"></i>
+        <input type="tel" placeholder="Enter Your Number" required>
+      </div>
+
+      <div class="information">
+        <i class="fa fa-map-marker-alt"></i>
+        <input type="text" placeholder="Enter Your Address" required>
+      </div>
+
+      <div class="information">
+        <i class="fa fa-hospital"></i>
+        <select id="department" onchange="updateDoctors()" required>
+          <option value="" disabled selected>Select Department</option>
+          <option value="cardiology">Cardiology</option>
+          <option value="neurology">Neurology</option>
+          <option value="Pediatrician">Pediatrician</option>
+        </select>
+      </div>
+
+      <div class="information">
+        <i class="fa fa-user-md"></i>
+        <select id="doctor" required>
+          <option value="" disabled selected>Select Department first</option>
+        </select>
+      </div>
+
+      <div class="information">
+        <i class="fa fa-calendar"></i>
+        <input type="date" required>
+      </div>
+
+      <div class="information">
+        <i class="fa fa-clock"></i>
+        <input type="time" required>
+      </div>
+
+      <button type="submit">Book Appointment</button>
+    </form>
+  </div>
+
+  <script src="App.js"></script>
+</body>
+</html>
